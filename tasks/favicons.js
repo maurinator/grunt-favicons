@@ -265,7 +265,7 @@ module.exports = function(grunt) {
                     convert(combine(source, f.dest, "192x192", "homescreen-192x192.png", additionalOpts));
                     grunt.log.ok();
                 }
-                
+
                 // Android Icons app
                 if (options.androidIcons) {
                     // 36x36: LDPI
@@ -449,7 +449,7 @@ module.exports = function(grunt) {
                 // Cleanup
                 if (options.regular) {
                     ['16x16', '32x32', '48x48'].forEach(function(size) {
-                        fs.unlink(path.join(f.dest, size + '.png'));
+                        fs.unlinkSync(path.join(f.dest, size + '.png'));
                     });
                 }
 
